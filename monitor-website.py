@@ -1,3 +1,14 @@
+#This script monitors the status of an application hosted on a Linode server. It uses the requests library to send an HTTP GET request to the application and check the response status code. 
+#If the response status code is not 200 (OK), it means the application is down.
+
+#The script then sends an email notification about the down status of the application using the smtplib library and the email login credentials stored as environment variables.
+
+#If the connection to the application results in an error, the script restarts the container running the application. 
+#If the container restart doesn't fix the issue, the script restarts the whole Linode server and then the container.
+
+#The script runs the monitor_application() function every 5 minutes using the schedule library.
+
+
 import requests
 import smtplib
 import os
