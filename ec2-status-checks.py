@@ -1,3 +1,5 @@
+#The check_instance_status function uses the EC2 client to describe the status of all instances and prints their instance ID, state, instance status, and system status every 5 mins
+
 import boto3
 import schedule
 
