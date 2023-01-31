@@ -1,3 +1,4 @@
+#Script tags installs ec2 client on instances, tags paris region ec2s as prod and Franfurt region as dev
 import boto3
 
 ec2_client_paris = boto3.client('ec2', region_name="eu-west-3")
