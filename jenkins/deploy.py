@@ -1,3 +1,8 @@
+#This is a Python script that connects to an EC2 server using the paramiko library and deploys a Docker image to it. 
+#The script sets several environment variables from Jenkinsfile, including the EC2 server information, Docker registry information, and the Docker image to deploy.
+#The script uses the paramiko library to establish an SSH connection to the EC2 server, and uses the docker login and docker run commands to deploy the Docker image to the EC2 server.
+#The output of the docker run command is printed to the console, indicating the status of the deployment.
+
 import os
 import paramiko
 
