@@ -1,3 +1,5 @@
+#creates snapshots of EC2 volumes in the "eu-west-3" region that are tagged with the name "prod". The schedule library is used to run the create_volume_snapshots function once a day. 
+
 import boto3
 import schedule
 
