@@ -1,3 +1,13 @@
+#This script uses the Boto3 library to interact with the Amazon Web Services (AWS) EC2 service. The script does the following:
+
+#Check if an EC2 instance with the name "my-server" already exists.
+#If it doesn't exist, it creates a new EC2 instance with the specified AMI image id, key pair, instance type and adds the tag "Name" with the value "my-server".
+#Waits until the instance is fully initialized.
+#Retrieves the public IP address of the instance.
+#Connects to the instance via SSH and installs Docker, starts Docker service, adds the user 'ec2-user' to the Docker group, and starts an Nginx container.
+#Note: To run this script, you need to complete the prerequisites mentioned in the code comments such as creating a key pair, 
+#opening the SSH port, and setting the variables such as image id, key name, instance type, and the path to the private key file.
+
 # Pre requisites
 Do the following manually to prepare your AWS region for the script execution 
 - open the SSH port 22 in the default security group in your default VPC 
