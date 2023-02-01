@@ -1,3 +1,9 @@
+#The script starts by importing the required modules (boto3 and os) and setting the repository name as an environment variable.
+# The ECR client is then initialized with the boto3 client, and the describe_images method is used to retrieve the list of images in the repository.
+
+#The image details are looped through and the first image tag of each image is appended to the image_tags list. 
+#Finally, the script loops through the image tags list and prints each tag to the console.
+
 import boto3
 import os
 
