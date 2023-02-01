@@ -1,3 +1,9 @@
+#This is a Python script to validate the deployment of a containerized application on an EC2 instance. 
+#The script sets the EC2 server hostname and host port from the environment variables and waits for 15 seconds to allow the application to start up. 
+#Then it sends a GET request to the application URL (hostname:host port) and checks if the status code of the response is 200 (success). 
+#If the status code is 200, it prints "Application is running successfully!"; otherwise, it prints "Application deployment was not successful". 
+#If any connection error occurs, it prints "Connection error happened" followed by the error message, and "Application not accessible at all".
+
 from wsgiref.util import request_uri
 import requests
 import time
